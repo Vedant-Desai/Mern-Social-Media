@@ -33,7 +33,7 @@ app.use(cors());
 app.use("/assets", express.static(path.join(__dirname, "public/assets")));
 
 app.get("/", (req, res) => {
-  app.use(express.static(path.resolve(__dirname, "client", "build")));
+  app.use(express.static(path.resolve(__dirname, "client", "dist")));
   res.sendFile(path.resolve(__dirname, "client", "dist", "index.html"));
 });
 
